@@ -21,12 +21,11 @@ def calculate_azimuth(layerSource):
     layer.dataProvider().addAttributes([QgsField('temp', QVariant.Int)])
     layer.commitChanges()
     layer.startEditing()
-    idx_layer = layer.fieldNameIndex('temp')
     #calculer l'azimuth de chaque ligne et rempli le champ temp avec cette valeur
     for f in layer.getFeatures():
         xy = f.geometry().asPolyline()
         azimuth = int(xy[0].azimuth(xy[1]))
-        layer.changeAttributeValue(f.id(),idx_layer, azimuth)
+        layer.changeAttributeValue(f.id(),layer.fieldNameIndex('temp'), azimuth)
     layer.commitChanges()
     return layer
 
@@ -43,11 +42,10 @@ def orientation(layer_point,layer_line):
     ids = [i.id() for i in it]
     layer_point.setSelectedFeatures(ids)
     #points = [feature for feature in layer_point.selectedFeatures()]    #recuperer l'azimuth de la ligne qui intersecte et remplir a_obj avec cette valeur 
-    idx_a_obj = layer_point.fieldNameIndex(field_to_fill)
     for elem in layer_point.selectedFeatures():
         for f in index.intersects(elem.geometry().boundingBox().buffer(tolerance)):
             azimuth = lines[f].attributes()[layer_line.fieldNameIndex('temp')]
-            layer_point.changeAttributeValue(elem.id(),idx_a_obj, azimuth)   
+            layer_point.changeAttributeValue(elem.id(),layer_point.fieldNameIndex(field_to_fill), azimuth)   
     layer_point.commitChanges()
 
 flayer_line = calculate_azimuth(tlayer_line)
