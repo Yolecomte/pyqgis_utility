@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+
+'''Connect two point layer with a line layer based on attribute'''
+
 layer_adr_pt =  QgsMapLayerRegistry.instance().mapLayersByName('Adresse ponctuel')[0]
 layer_adr_line = QgsMapLayerRegistry.instance().mapLayersByName('ADR_LIGNE_ADRESSE__LineString')[0]
 layer_adr_rep_route = QgsMapLayerRegistry.instance().mapLayersByName('ADR_REPERE_ROUTE__Point')[0] 
