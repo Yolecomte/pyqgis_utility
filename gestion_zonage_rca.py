@@ -31,7 +31,7 @@ def load_zonage_rca (commune) :
 			QgsMapLayerRegistry.instance().addMapLayer(layer)
 			print com 
         else:
-			print 'Pas de ZONAGE_RCA pour la commune ' + com
+            print 'Pas de ZONAGE_RCA pour la commune ' + com
 
 def save_zonage_rca(commune) :
     for com in commune:
