@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-
-'''Comparaison of the field of two layer'''
-
 for layer in QgsMapLayerRegistry.instance().mapLayers().values():
     if layer.name() == 'Reseau EP.shp':
        cable = layer

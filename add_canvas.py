@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 from qgis.gui import *
 from PyQt4.QtGui import *
-
-'''Instanciate a secondary Map Canvas and add a layer'''
 
 canvas = QgsMapCanvas()
 layer = QgsRasterLayer(r'C:/Users/ylecomte/Desktop/Tmp/IMG/apercu.png', 'layer')

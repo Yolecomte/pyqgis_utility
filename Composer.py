@@ -1,11 +1,7 @@
-# -*- coding: utf-8 -*-
-
 from qgis.core import *
 from qgis.gui import *
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
-
-'''Create an image from the scratch, which is zoomed on a specific object'''
 
 ID_PAR = '7401360000B0250'
 

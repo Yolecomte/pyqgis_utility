@@ -15,7 +15,7 @@ def convert_folder(path = '.'):
 	for dossier, sd, fichiers in os.walk(path):
 		for fichier in fichiers:
 			print 'traitement de {}'.format(fichier)
-			if fichier.upper().find('.PNG') > 0:
+			if fichier.upper().endswith('.PNG'):
 				convert(os.path.join(dossier, fichier))
 	print debut - datetime.datetime.now()
 
