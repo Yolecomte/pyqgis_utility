@@ -1,3 +1,10 @@
+#coding : utf-8
+"""
+Author : YoLecomte
+
+To use in QGIS python console
+"""
+
 layer_adr_line = QgsMapLayerRegistry.instance().mapLayersByName('lg_adresse_final')[0]
 layer_adr_line.startEditing()
 for feat in layer_adr_line.getFeatures():

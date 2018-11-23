@@ -1,11 +1,17 @@
-from qgis.core import *
-from qgis.gui import *
-from PyQt4 import uic
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+#coding : utf-8
+"""
+Author : YoLecomte
 
-layer = qgis.utils.iface.activeLayer()
-rubber = QgsRubberBand(qgis.utils.iface.mapCanvas(), True)
+To use in QGIS python console
+"""
+
+from qgis.core import *
+from qgis.gui import QgsRubberBand
+from PyQt4.QtCore import Qt
+from PyQt4.QtGui import QColor
+
+layer = iface.activeLayer()
+rubber = QgsRubberBand(iface.mapCanvas(), True)
 rubber.setColor(QColor(255,0,0))
 rubber.setBrushStyle(Qt.Dense6Pattern)
 rubber.setWidth(4)

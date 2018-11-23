@@ -1,3 +1,10 @@
+#coding : utf-8
+"""
+Author : YoLecomte
+
+To use in QGIS python console
+"""
+
 list_communes = [
     ('73002','Aiguebelle'),
     ('73007','Aiton'),

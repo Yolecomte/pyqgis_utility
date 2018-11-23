@@ -1,3 +1,10 @@
+#coding : utf-8
+"""
+Author : YoLecomte
+
+To use in QGIS python console
+"""
+
 layer = iface.activeLayer()
 layer.startEditing()
 for feat in layer.getFeatures():

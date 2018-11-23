@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-'''script permettant de générer des fichiers .points compatible avec le géoreferenceur QGIS a partir d'un shape de point'''
+'''script permettant de gÃ©nÃ©rer des fichiers .points compatible avec le gÃ©oreferenceur QGIS a partir d'un shape de point'''
 
 import os
 
